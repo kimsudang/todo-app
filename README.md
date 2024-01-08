@@ -35,16 +35,16 @@
 
 
 ### 오류
-- 강의를 수강하며 코드를 작성하는데 TypeError 발생
-`Uncaught TypeError TypeError: Document.createElement is not a function`
-=> document.~~로 사용해야 하는데 Document.~~ 로 작성한 부분 발견
+- 강의를 수강하며 코드를 작성하는데 TypeError 발생 </br>
+`Uncaught TypeError TypeError: Document.createElement is not a function` </br>
+=> document.OO으로 사용해야 하는데 Document.OO으로 작성한 부분 발견 </br>
 => 수정 후 해결됨
 
-- TypeError와 새로고침 시 할 일 목록 하나가 생성되어 있음
-`Uncaught TypeError TypeError: Cannot destructure property 'itemEl' of 'createNewTodo(...)' as it is undefined.`
-=> 함수 연결을 잘못(`createNewTodo()`)해서 매개변수가 없는 함수에 매개변수를 넣어버렸다.
+- TypeError와 새로고침 시 할 일 목록 하나가 생성되어 있음 </br>
+`Uncaught TypeError TypeError: Cannot destructure property 'itemEl' of 'createNewTodo(...)' as it is undefined.` </br>
+=> 함수 연결을 잘못(`createNewTodo()`)해서 매개변수가 없는 함수에 매개변수를 넣어버렸다. </br>
 => 맞는 함수 연결 후 해결됨 (매개변수 item을 가지고 있는 `createTodoElement(item)`)
 
-- 새로 고침을 눌렀을 때 모든 할 일 목록(완료 한 일 포함)이 수정 가능 상태로 변경
-=> input에 disabled 속성이 들어가야 하는데 왜인지 상위 div인 item에 disabled 속성이 들어감
+- 새로 고침을 눌렀을 때 모든 할 일 목록(완료 한 일 포함)이 수정 가능 상태로 변경 </br>
+=> input에 disabled 속성이 들어가야 하는데 왜인지 상위 div인 item에 disabled 속성이 들어감 </br>
 => input 요소를 생성하는 코드에서 input이 아닌 item에 disabled 속성을 추가함
